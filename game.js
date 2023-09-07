@@ -1,5 +1,5 @@
 function  getComputerChoice() {
-    let choices = ['rock', 'paper', 'scissor']
+    let choices = ['rock', 'paper', 'scissors']
     let choice = Math.floor(Math.random() * choices.length);
     return choices[choice];
 }
@@ -9,8 +9,8 @@ function playRound(playerSelection, computerSelection) {
         return -1; // tie
     }
     if((playerSelection == "rock" && computerSelection == "paper") ||
-        (playerSelection == "paper" && computerSelection == "scissor") ||
-        (playerSelection == "scissor"  && computerSelection == "rock")){
+        (playerSelection == "paper" && computerSelection == "scissors") ||
+        (playerSelection == "scissors"  && computerSelection == "rock")){
             return 0; // player loses
     }
     else {
@@ -29,7 +29,7 @@ function disableAllButtons(){
 let playerScore = 0;
 let computerScore = 0;
 function game(e){
-    let playerSelection = this.id; // rock or paper or scissor
+    let playerSelection = this.id; // rock or paper or scissors
     let computerSelection = getComputerChoice();
     console.log(playerSelection+" "+computerSelection);
     let result = '';
